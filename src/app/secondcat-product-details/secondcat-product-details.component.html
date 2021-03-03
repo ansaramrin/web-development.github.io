@@ -1,0 +1,29 @@
+<h2>Product Details</h2>
+<div *ngIf="product_second">
+    <h3>{{ product_second.name }}</h3>
+
+    <img src="{{product_second.image1}}" width="450" height="400">
+    <img src="{{product_second.image2}}" width="450" height="400">
+    <img src="{{product_second.image3}}" width="450" height="400">
+
+
+    <h4>{{ product_second.price | currency }}</h4>
+
+    <p>{{ product_second.description }}</p>
+
+    <button id="prod_buy_s" (click)="addToCart(product_second)">Buy</button>
+
+    <button id="wa_s" (click)="sharetowhatsapp(product_second)"><img src="https://cdn.worldvectorlogo.com/logos/whatsapp-symbol.svg" width="50" height="35">
+        Share to WhatsApp
+    </button>
+
+    <button id="tg_s" (click)="sharetotelegram(product_second)"><img src="https://cdn.worldvectorlogo.com/logos/telegram-1.svg" width="50" height="35">
+        Share to Telegram
+    </button>
+
+    <button id="like_but" (click)="likeButtonClick()"><img src="https://avatanplus.com/files/resources/original/5eab1514d6099171cc4a598d.png" width="40" height="35">
+        Likes {{numberOfLikes}}
+    </button>
+
+
+</div>

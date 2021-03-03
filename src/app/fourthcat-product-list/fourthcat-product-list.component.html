@@ -1,0 +1,32 @@
+<h2>Products</h2>
+
+<div *ngFor="let product of products_f">
+    <h3>
+        <a [title]="product.name + ' details'" [routerLink]="['/fourth_category', product.id] "  >
+            {{ product.name }}
+        </a>
+    </h3>
+
+    <button id="del" (click)="removeItem(product.id)">Remove</button>
+
+    <img src="{{product.image1}}" width="400" height="500">
+    <br>
+    <img src="{{product.rating}}" width="100" height="20">
+    <p *ngIf="product.description">
+        {{ product.description }}
+    </p>
+
+
+    <app-product-alerts
+            [product]="product"
+            (notify)="onNotify()">
+    </app-product-alerts>
+
+
+
+
+    <!--
+    Copyright Google LLC. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at https://angular.io/license
+    -->

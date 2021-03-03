@@ -1,0 +1,21 @@
+h2:hover{
+    color: royalblue;
+}
+
+h2{
+    border-style:solid;
+    border-radius: 10px;
+    text-align: center;
+    background-color: coral;
+    color: midnightblue;
+    font-weight: bold;
+
+}
+
+h1{
+    color: darkslateblue;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 100px;
+    font-weight: bold;
+
+}
